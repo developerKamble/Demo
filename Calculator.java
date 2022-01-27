@@ -1,32 +1,49 @@
+import java.util.Scanner;
+public class Calculator {
 
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		 int a,b;
+         float res=0;
+	        char ch,x;
+	        Scanner sc =new Scanner(System.in);
+			System.out.println("Enter the num1");
+	        a=sc.nextInt();
+			System.out.println("Enter the num2");
+	        b=sc.nextInt();
+	        
+	        do {
+				System.out.println("Enter the operation u want to do \n 1 + \n 2 - \n 3 *\n 4 / \n");
+		        ch=sc.next().charAt(0);
+	     
+		        switch(ch) {
+	
+		            case '1': {
+		                res=a+b;
+		                System.out.println("\nResult : "+res);
+		                break;
+		            }
+		            case '2': {
+		                res=a-b;
+		                System.out.println("\nResult : "+res);
+		                break;
+		            }
+		            case '3': {
+		                res=a/b;
+		                System.out.println("\nResult : "+res);
+		                break;
+		            }
+		            case '4': {
+		                res=a*b;
+		                System.out.println("\nResult : "+res);
+		                break;
+		            }
+		            default :
+		            	 System.out.println("Enter Valid Option");
 
-class Calculator{
-      
-    static void add(int a, int b){
-        int c=a+b;
-        System.out.println("Addition =>"+c);
-    }
-    static void sub(int a, int b){
-        int c=b-a;
-        System.out.println("Substraction =>"+c);
-    }
-    static void div(int a, int b){
-        int c=a*b;
-        System.out.println("Multiplication =>"+c);
-    }
-    static void mult(int a, int b){
-        float c=b/a;
-        System.out.println("Division =>"+c);
-    }
-
-    public static void main(String[] args){
-        int a=10,b=20;
-        //abc
-        add(a,b);
-        sub(a,b);
-        div(a,b);
-        mult(a,b);
-
-    
-    }
+		        }
+		        System.out.println("Do u want to continue (y/n) : ");
+                x=sc.next().charAt(0);
+	        }while(x=='y');
+	}
 }
